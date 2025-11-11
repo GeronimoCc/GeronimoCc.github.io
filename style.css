@@ -1,0 +1,340 @@
+/* --- Variables Globales --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #1abc9c;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --bg-color: #f4f7f9;
+    --text-color: #333;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Generales y Reset --- */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* --- Barra de Navegación --- */
+.navbar {
+    background: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    background: none;
+    border: none;
+    padding: 0 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
+}
+
+/* --- Sección Hero (Encabezado) --- */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://source.unsplash.com/1600x900/?family,pets') no-repeat center center/cover;
+    color: #fff;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* --- Estilo de Secciones --- */
+section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.icon {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* --- Tarjetas de Datos Relevantes --- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card .card-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.card .stat {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.card .label {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* --- Visualizaciones (Gráficos) --- */
+.chart-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.chart-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.chart-item h3 {
+    margin-top: 0;
+    color: var(--dark-color);
+}
+
+.chart-item img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* --- Hipótesis --- */
+.hypothesis-card {
+    background: var(--bg-color);
+    border-left: 5px solid var(--secondary-color);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+.hypothesis-card h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.conclusion {
+    margin: 10px 0;
+}
+
+.status {
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.status.confirmada { background: var(--accent-color); }
+.status.parcial { background: #f39c12; }
+.status.no-confirmada { background: #e74c3c; }
+
+/* --- Bloque de Código --- */
+.code-block {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    border-radius: 8px;
+    padding: 10px 20px 20px;
+    box-shadow: var(--shadow);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.code-title {
+    color: #999;
+    margin-left: 20px;
+}
+
+.code-block pre {
+    margin: 0;
+    overflow-x: auto;
+}
+
+.code-block .comment { color: #7f8c8d; }
+.code-block .keyword { color: #f92672; }
+.code-block .string { color: #a6e22e; }
+.code-block .function { color: #66d9ef; }
+
+/* --- Listas en Discusión --- */
+#discussion ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#discussion li {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+#discussion li i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+#discussion h3:first-of-type li i { color: #e74c3c; }
+#discussion h3:last-of-type li i { color: #2ecc71; }
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar .nav-links {
+        margin-top: 10px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
