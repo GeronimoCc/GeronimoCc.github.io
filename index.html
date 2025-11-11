@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Encuesta: Preferencias Familiares</title>
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a Google Fonts y Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Análisis de Datos</a>
+            <ul class="nav-links">
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#summary">Datos</a></li>
+                <li><a href="#visualizations">Gráficos</a></li>
+                <li><a href="#hypotheses">Hipótesis</a></li>
+                <li><a href="#code">Código</a></li>
+                <li><a href="#discussion">Discusión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Análisis de Preferencias Familiares</h1>
+            <p class="subtitle">Un estudio sobre la dinámica entre hijos y mascotas</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="intro">
+            <h2><i class="fas fa-file-alt icon"></i> Acerca de la Encuesta</h2>
+            <p>Este análisis explora la situación familiar y la tenencia de mascotas de los encuestados, buscando entender sus preferencias actuales y futuras. El estudio se basa en una muestra de 50 personas mayores de 17 años.</p>
+            <h3>Metodología</h3>
+            <div class="methodology-grid">
+                <div class="method-item"><i class="fab fa-google"></i> <strong>Plataforma:</strong> Google Forms</div>
+                <div class="method-item"><i class="fas fa-calendar-alt"></i> <strong>Período:</strong> 8 - 16 de Septiembre</div>
+                <div class="method-item"><i class="fas fa-users"></i> <strong>Muestra:</strong> 50 participantes</div>
+                <div class="method-item"><i class="fab fa-whatsapp"></i> <strong>Difusión:</strong> WhatsApp</div>
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2><i class="fas fa-chart-pie icon"></i> Datos Relevantes</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-users-cog card-icon"></i>
+                    <div class="stat">76%</div>
+                    <div class="label">Quiere tener hijos y mascotas en el futuro</div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-venus-mars card-icon"></i>
+                    <div class="stat">68%</div>
+                    <div class="label">De los participantes son mujeres</div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paw card-icon"></i>
+                    <div class="stat">62%</div>
+                    <div class="label">Actualmente solo tiene mascotas</div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-dog card-icon"></i>
+                    <div class="stat">58%</div>
+                    <div class="label">Prefiere un perro como mascota única</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualizations">
+            <h2><i class="fas fa-chart-bar icon"></i> Visualizaciones de los Datos</h2>
+            <div class="chart-container">
+                <div class="chart-item">
+                    <h3>Distribución de Edad</h3>
+                    <img src="img/distribución_edad.png" alt="Gráfico de distribución de edad">
+                </div>
+                <div class="chart-item">
+                    <h3>Situación Familiar Actual</h3>
+                    <img src="img/situación_actual.png" alt="Gráfico de situación actual">
+                </div>
+                <div class="chart-item">
+                    <h3>Preferencia Futura</h3>
+                    <img src="img/preferencia_futura.png" alt="Gráfico de preferencia futura">
+                </div>
+                <div class="chart-item">
+                    <h3>Preferencia de Mascota Única</h3>
+                    <img src="img/preferencia_mascota.png" alt="Gráfico de preferencia de mascota">
+                </div>
+                 <div class="chart-item">
+                    <h3>Edad vs. Preferencia Futura</h3>
+                    <img src="img/edad_vs_preferencia.png" alt="Gráfico de Edad vs. Preferencia Futura">
+                </div>
+                <div class="chart-item">
+                    <h3>Situación Actual por Grupo de Edad</h3>
+                    <img src="img/situación_por_edad.png" alt="Gráfico de Situación Actual por Grupo de Edad">
+                </div>
+            </div>
+        </section>
+        
+        <section id="hypotheses">
+            <h2><i class="fas fa-lightbulb icon"></i> Análisis de Hipótesis</h2>
+            <div class="hypothesis-card">
+                <h4><i class="fas fa-user-friends"></i> H1: “Las personas mayores prefieren hijos antes que mascotas.”</h4>
+                <div class="conclusion"><span class="status no-confirmada">No Confirmada</span></div>
+                <p>Las personas mayores (+35 años) no muestran una preferencia de hijos sobre mascotas; de hecho, el 63% de este grupo prefiere tener "Tanto hijos como mascotas" en el futuro.</p>
+            </div>
+            <div class="hypothesis-card">
+                <h4><i class="fas fa-balance-scale"></i> H2: “Quienes tienen más hijos suelen tener menos mascotas.”</h4>
+                <div class="conclusion"><span class="status parcial">Parcialmente Confirmada</span></div>
+                <p>Se observa una tendencia inversa: a mayor número de hijos, el promedio de mascotas disminuye. Las familias con 1 hijo tienen un promedio de 2.8 mascotas, vs. 1.5 en familias con 3 o más hijos.</p>
+            </div>
+            <div class="hypothesis-card">
+                <h4><i class="fas fa-graduation-cap"></i> H3: “Las personas jóvenes prefieren perros antes que hijos.”</h4>
+                <div class="conclusion"><span class="status confirmada">Confirmada</span></div>
+                <p>En el grupo de 18-25 años, el 72% tiene solo mascotas. Además, el 88% de los jóvenes prefiere al perro como su mascota ideal, mostrando una clara prioridad por los animales de compañía.</p>
+            </div>
+        </section>
+
+        <section id="code">
+            <h2><i class="fas fa-code icon"></i> Muestra de Código Python</h2>
+            <p>Para analizar los datos, se utilizó la librería Pandas en Python. A continuación, un fragmento del código empleado para la limpieza y preparación de los datos.</p>
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-title">PreferenciasFamiliares.py</span>
+                </div>
+                <pre><code><span class="comment"># Renombro columnas para facilitar el acceso</span>
+df = df.rename(columns={
+    <span class="string">'Edad'</span>: <span class="string">'edad'</span>,
+    <span class="string">'¿Cuál es tu género?'</span>: <span class="string">'genero'</span>,
+    <span class="string">'Idealmente, ¿qué te gustaría tener en el futuro?'</span>: <span class="string">'preferencia_futura'</span>,
+    <span class="string">' Si tuvieras que elegir SOLO UNA mascota, ¿cuál sería?'</span>: <span class="string">'mascota_preferida'</span>
+})
+
+<span class="comment"># Unifico las respuestas de hijos y mascotas que estaban en columnas separadas</span>
+df[<span class="string">'hijos_actual'</span>] = df[<span class="string">'¿Cuántos hijos tienes?'</span>].combine_first(df[<span class="string">'¿Cuántos hijos tienes?.1'</span>])
+df[<span class="string">'mascotas_actual'</span>] = df[<span class="string">'¿Cuántas mascotas tienes?'</span>].combine_first(df[<span class="string">'¿Cuántas mascotas tienes?.1'</span>])
+
+<span class="comment"># Estandarizo respuestas de texto para la mascota preferida</span>
+<span class="keyword">def</span> <span class="function">categorizar_mascota</span>(respuesta):
+    respuesta = str(respuesta).lower()
+    <span class="keyword">if</span> <span class="string">'perro'</span> <span class="keyword">in</span> respuesta:
+        <span class="keyword">return</span> <span class="string">'Perro'</span>
+    <span class="keyword">elif</span> <span class="string">'gato'</span> <span class="keyword">in</span> respuesta:
+        <span class="keyword">return</span> <span class="string">'Gato'</span>
+    <span class="keyword">else</span>:
+        <span class="keyword">return</span> <span class="string">'Otra'</span>
+
+df[<span class="string">'mascota_categoria'</span>] = df[<span class="string">'mascota_preferida'</span>].apply(categorizar_mascota)
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="discussion">
+            <h2><i class="fas fa-comments icon"></i> Discusión Final</h2>
+            <h3>Dificultades Encontradas</h3>
+            <ul>
+                <li><i class="fas fa-exclamation-circle"></i> La estructura del formulario generó columnas de datos duplicadas.</li>
+                <li><i class="fas fa-exclamation-circle"></i> Algunas respuestas de texto libre requirieron recategorización manual.</li>
+                <li><i class="fas fa-exclamation-circle"></i> Conseguir una muestra amplia y diversa en poco tiempo fue un desafío.</li>
+            </ul>
+            <h3>Mejoras Futuras</h3>
+            <ul>
+                <li><i class="fas fa-arrow-alt-circle-right"></i> Optimizar el diseño del formulario para evitar duplicación.</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i> Usar más opciones predefinidas para facilitar el análisis.</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i> Ampliar la difusión para obtener una muestra más representativa.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Análisis realizado por Geronimo Cola</p>
+    </footer>
+
+</body>
+</html>
